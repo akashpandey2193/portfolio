@@ -49,6 +49,7 @@
         <v-btn
           :href="project.href"
           class="ma-0 mt-2 btn"
+          target="_blank"
           color="secondary">Know More</v-btn>
       </div>
     </section>
