@@ -1,5 +1,5 @@
 <template>
-  <div class="pa-3">
+  <div class="pa-2 mx-auto">
     <overview/>
   </div>
 </template>

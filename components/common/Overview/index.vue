@@ -31,8 +31,18 @@
         v-for="project in projects"
         :key="project.projectName"
         class="default-container mb-4">
-        <span class="heading">{{ project.projectName }}</span>
-        <div class="desc mt-2">{{ project.desc }}</div>
+        <span class="heading mb-4">{{ project.projectName }}</span>
+        <div class="flex flex-row project-container">
+          <div
+            :class="[$device.isDesktop ? 'mr-3': '' ,'desc','mt-2' ,'flex-2']">{{ project.desc }}</div>
+          <div
+            v-if="$device.isDesktop && project.img"
+            class="project-image-container">
+            <img
+              :src="project.img"
+              :alt="project.projectName">
+          </div>
+        </div>
         <div
           class="pt-2 flex">
           <div
@@ -84,6 +94,7 @@ export default {
           'It requires zero programming knowledge. The user has the full control over the look and feel of' +
           ' the form. In Formester validation, spam protection and integration with different CRMs are few clicks away.',
           href: 'https://alternativeto.net/software/formester/',
+          img: '/formester.png',
           technology: ['html', 'css', 'vue', 'bootstrap', 'javascript']
         },
         {
@@ -92,6 +103,7 @@ export default {
           'contributors and stakeholders can be very challenging. Shareito provides a central place to manage'+
           ' this. It helps keep track of suspicious activities, ensures strong password usage and optional 2-factor authentication.',
           href: 'https://beta.shareito.com/',
+          img: '/shareito.png',
           technology: ['html', 'css', 'vue', 'vuetify', 'javascript']
         },
         {
@@ -99,14 +111,15 @@ export default {
           desc: 'Autochat helps E-commerce businesses increase their conversion and retention rates by engaging users '+
           'with contextual, proactive & automated conversations throughout their purchase journey.',
           href: 'https://autochat.io/',
-          technology: ['html', 'css', 'react', 'redux', 'javascript']
+          img: 'autochat.png',
+          technology: [ 'react', 'redux', 'javascript']
         },
         {
           projectName: 'Trokka',
           desc: 'Trokka serve the masses as a full-service travel aggregator comprising public transportation tickets,'+
           ' attraction and hotel bookings, flight tickets, and more under one brand. ',
           href: 'https://www.linkedin.com/company/trokka/?originalSubdomain=in',
-          technology: ['html', 'css','nuxt','webpack', 'javascript']
+          technology: ['nuxt','webpack', 'javascript']
         }
       ]
     }
@@ -114,5 +127,16 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="stylus" scoped>
+.project-container
+  // align-items center
+.flex-2
+  flex 2
+.project-image-container
+  flex 1
+  img
+    border-radius 8px
+    border 1px solid #e6e6e6
+    height 200px
+    max-width 320px
 </style>
