@@ -1,7 +1,7 @@
 <template>
   <div class="full-height full-width">
     <home-desktop
-      v-if="$device.isDesktop"/>
+      v-if="$device.isDesktop || $device.isTablet"/>
     <home-mobile
       v-if="$device.isMobile"/>
   </div>
