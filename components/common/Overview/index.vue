@@ -32,9 +32,31 @@
         :key="project.projectName"
         class="default-container mb-4">
         <span class="heading mb-4">{{ project.projectName }}</span>
-        <div class="flex flex-row project-container">
-          <div
-            :class="[$device.isDesktop ? 'mr-3': '' ,'desc','mt-2' ,'flex-2']">{{ project.desc }}</div>
+        <div class="flex">
+          <div class="flex-column">
+            <div
+              :class="[$device.isDesktop ? 'mr-3': '' ,'desc','mt-2']">{{ project.desc }}</div>
+            <div>
+              <div
+                class="pt-2 flex">
+                <div
+                  v-for="item in project.technology"
+                  :key="item"
+                  class="mr-3">
+                  <img
+                    :src="technologyIcons[`${item}`].href"
+                    :alt="technologyIcons[`${item}`].alt"
+                    height="30px"
+                    width="30px">
+                </div>
+              </div>
+              <v-btn
+                :href="project.href"
+                class="ma-0 mt-2 btn"
+                target="_blank"
+                color="secondary">Know More</v-btn>
+            </div>
+          </div>
           <div
             v-if="$device.isDesktop && project.img"
             class="project-image-container">
@@ -43,24 +65,6 @@
               :alt="project.projectName">
           </div>
         </div>
-        <div
-          class="pt-2 flex">
-          <div
-            v-for="item in project.technology"
-            :key="item"
-            class="mr-3">
-            <img
-              :src="technologyIcons[`${item}`].href"
-              :alt="technologyIcons[`${item}`].alt"
-              height="30px"
-              width="30px">
-          </div>
-        </div>
-        <v-btn
-          :href="project.href"
-          class="ma-0 mt-2 btn"
-          target="_blank"
-          color="secondary">Know More</v-btn>
       </div>
     </section>
   </div>
@@ -128,10 +132,12 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.project-container
-  // align-items center
 .flex-2
   flex 2
+.flex-column
+  display flex
+  flex-direction column
+  justify-content space-between
 .project-image-container
   flex 1
   img
