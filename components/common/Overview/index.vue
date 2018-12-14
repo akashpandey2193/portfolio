@@ -3,7 +3,7 @@
     <section id="AboutMe">
       <span class="heading pb-1 pl-2">About Me</span>
       <div class="default-container mb-4">
-        <span class="heading">Akash Pandey</span>
+        <span class="name">Akash Pandey</span>
         <span class="sub-heading">Front End Developer</span>
         <div class="social-media-container pt-2">
           <a
@@ -89,7 +89,8 @@ export default {
       socialIcons: [
         { href:'https://www.facebook.com/aakash.pandey.182', alt: 'facebook', src: '/facebook.svg' },
         { href:'https://www.linkedin.com/in/akash-pandey43/', alt: 'github', src: '/github.svg' },
-        { href:'mailto:akashpandey21@gmail.com', alt: 'gmail', src: '/gmail.svg' }
+        { href:'https://www.linkedin.com/in/akash-pandey43/', alt:'linkedIn', src:'/linkedIn.svg'},
+        // { href:'mailto:akashpandey21@gmail.com', alt: 'gmail', src: '/gmail.svg' }
       ],
       projects: [
         {
@@ -132,6 +133,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.name
+  font-size 32px
+  font-weight bold
 .flex-2
   flex 2
 .flex-column
