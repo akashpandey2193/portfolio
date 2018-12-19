@@ -21,7 +21,8 @@
         </div>
         <div
           class="desc mt-2">
-          I build and ship product with great UI/UX and which help and value users.
+          I am passionate about my work. Because I love what I do, I have a steady source of motivation that drives me to do my best.
+          I like making and shipping products with good UI/UX that helps and value users.
         </div>
       </div>
     </section>
@@ -36,6 +37,11 @@
           <div class="flex-column">
             <div
               :class="[$device.isDesktop ? 'mr-3': '' ,'desc','mt-2']">{{ project.desc }}</div>
+            <div
+              :class="[$device.isDesktop ? 'mr-3': '' ,'desc','mt-2']">
+              <span class="sub-heading inline">Responsibilities:</span>
+              {{ project.responsibilities }}
+            </div>
             <div>
               <div
                 class="pt-2 flex">
@@ -98,6 +104,7 @@ export default {
           desc: 'A form backend as a service. It makes creating form endpoints for websites very easy. '+
           'It requires zero programming knowledge. The user has the full control over the look and feel of' +
           ' the form. In Formester validation, spam protection and integration with different CRMs are few clicks away.',
+          responsibilities: 'Was working mainly on the UI part with HTML and CSS and Bootstrap to give a more better feel to the product.',
           href: 'https://alternativeto.net/software/formester/',
           img: '/formester.png',
           technology: ['html', 'css', 'vue', 'bootstrap', 'javascript']
@@ -109,6 +116,8 @@ export default {
           ' this. It helps keep track of suspicious activities, ensures strong password usage and optional 2-factor authentication.',
           href: 'https://beta.shareito.com/',
           img: '/shareito.png',
+          responsibilities: 'Work with UI and adding different functionalities to the project. Focus on making resuable components in VueJs that could be used '+
+          'in the future as the application scale up.',
           technology: ['html', 'css', 'vue', 'vuetify', 'javascript']
         },
         {
@@ -116,6 +125,8 @@ export default {
           desc: 'Autochat helps E-commerce businesses increase their conversion and retention rates by engaging users '+
           'with contextual, proactive & automated conversations throughout their purchase journey.',
           href: 'https://autochat.io/',
+          responsibilities: 'Was working on Devathon and Autochat website for increasing SEO ratings reducing load and maintaining the website. '+
+          'Worked with ReactJS and Redux to make the facebook messenger like chat system and upgrade the all ready existing functionalities for it.',
           img: 'autochat.png',
           technology: [ 'react', 'redux', 'javascript']
         },
@@ -124,6 +135,9 @@ export default {
           desc: 'Trokka serve the masses as a full-service travel aggregator comprising public transportation tickets,'+
           ' attraction and hotel bookings, flight tickets, and more under one brand. ',
           href: 'https://www.linkedin.com/company/trokka/?originalSubdomain=in',
+          responsibilities: 'I work with NuxtJs, VueJs, JQuery, Bootstrap,etc to work on various products for the company. Trokka is a new product for the company '+
+          'in which I work on with various api integrations. Trokka is having total 4 services that would be offered which has 4 different projects co-existing together '+
+          'having same components used throughout each of the project.',
           technology: ['nuxt','webpack', 'javascript']
         }
       ]
@@ -138,6 +152,8 @@ export default {
   font-weight bold
 .flex-2
   flex 2
+.inline
+  display inline
 .flex-column
   display flex
   flex-direction column
