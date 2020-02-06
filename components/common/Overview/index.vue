@@ -21,8 +21,7 @@
         </div>
         <div
           class="desc mt-2">
-          I am passionate about my work. Because I love what I do, I have a steady source of motivation that drives me to do my best.
-          I like making and shipping products with good UI/UX that helps and value users.
+         Most of the times you will find me dabbling with some idea unless I am working hard to earn a livelihood. To me, coding is an art, editor my canvas and keywords are my brush. When inspiration strikes, I sit down to paint algorithms, which shall be maintained, extended and tested for the ages to come.
         </div>
       </div>
     </section>
